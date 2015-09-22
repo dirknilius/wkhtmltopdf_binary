@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+raise "Platform not supported." unless RUBY_PLATFORM =~ /x86_64-linux/
+system("#{__FILE__}-#{RUBY_PLATFORM}")

@@ -1,4 +1,12 @@
 #!/usr/bin/env ruby
 
-raise "Platform not supported." unless RUBY_PLATFORM =~ /x86_64-linux|x86_64-darwin14/
-system("#{__FILE__}-#{RUBY_PLATFORM}")
+platform = case RUBY_PLATFORM
+             when /x86_64-linux.*/
+               'x86_64-linux'
+             when /x86_64-darwin.*/
+               'x86_64-darwin'
+             else
+               raise "Platform not supported. Must be Linux or OS X with 64bit."
+           end
+
+system("#{__FILE__}-#{platform}")

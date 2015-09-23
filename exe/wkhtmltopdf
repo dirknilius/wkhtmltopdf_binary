@@ -9,4 +9,6 @@ platform = case RUBY_PLATFORM
                raise "Platform not supported. Must be Linux or OS X with 64bit."
            end
 
-system("#{__FILE__}-#{platform}")
+args = ARGV.inject('') { |result, arg| "#{result} #{arg}" }
+
+system("#{__FILE__}-#{platform}#{args}")

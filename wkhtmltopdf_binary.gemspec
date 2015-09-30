@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "wkhtmltopdf_binary"
-  spec.version       = '0.12.3-dev2'
+  spec.version       = "0.12.3.1"
   spec.authors       = ["Dirk Nilius"]
   spec.email         = ["dirk.nilius@ckc.de"]
 
